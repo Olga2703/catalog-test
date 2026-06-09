@@ -31,19 +31,19 @@
 }
 
 .page__decor--chevrons-left {
-	width: fluid(36, 83);   // было 28, 48
+	width: fluid(36, 83);
 	height: fluid(150, 44);
 	left: fluid(4, 56);
-	top: fluid(180, 687);   // меньше = выше
-	transform: none;        // убрать translateY(-50%)
+	top: fluid(180, 687);
+	transform: none;
 	background-image: url('../../images/icons/shapes-1.svg');
 }
 
 .page__decor--chevrons-right {
-	width: fluid(36, 85);   // было 28, 48
+	width: fluid(36, 85);
 	height: fluid(150, 85);
 	right: fluid(4, 72);
-	top: fluid(380, 1104);   // больше = ниже
+	top: fluid(380, 1104);
 	transform: none;
 	background-image: url('../../images/icons/shapes.svg');
 }
