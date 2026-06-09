@@ -1,0 +1,41 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.load-more {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: fluid(8, 12);
+	margin: 0 auto;
+	padding: fluid(8, 12) fluid(16, 24);
+	font-size: fluid(14, 16);
+	font-weight: 700;
+	line-height: 1.6;
+	color: $color-text-dark;
+	transition: color 0.2s ease;
+
+	&:hover {
+		color: $color-accent;
+	}
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&[hidden] {
+		display: none;
+	}
+}
+
+.load-more__icon {
+	width: fluid(20, 24);
+	height: fluid(20, 24);
+	background-image: url("../../images/icons/Convert.svg");
+	background-repeat: no-repeat;
+	background-size: contain;
+	transition: background-image 0.2s ease;
+
+	.load-more:hover & {
+		background-image: url("../../images/icons/Convert.svg");
+	}
+}

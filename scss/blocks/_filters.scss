@@ -1,0 +1,53 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.filters {
+	flex: 1 1 auto;
+	min-width: min(100%, 280px);
+}
+
+.filters__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: fluid(8, 12);
+	@media(max-width: 700px) {
+		justify-content: center;
+	}
+}
+
+.filters__btn {
+	display: inline-flex;
+	align-items: center;
+	gap: 2px;
+	padding: fluid(8, 10) fluid(12, 20);
+	border: 1px solid transparent;
+	border-radius: fluid(4, 6);
+	font-size: fluid(14, 16);
+	font-weight: 700;
+	line-height: 1.6;
+	color: $color-text-light;
+	white-space: nowrap;
+	transition: color 0.2s ease, border-color 0.2s ease;
+
+	&:hover {
+		color: $color-text;
+	}
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&--active {
+		color: $color-accent;
+		border-color: $color-accent;
+	}
+}
+
+.filters__count {
+	font-size: 0.65em;
+	font-weight: 700;
+	line-height: 1;
+	vertical-align: super;
+	margin-top: -5px;
+}

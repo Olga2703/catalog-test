@@ -1,0 +1,17 @@
+@use 'base/reset';
+@use 'base/variables' as *;
+@use 'blocks/page';
+@use 'blocks/courses';
+@use 'blocks/filters';
+@use 'blocks/search';
+@use 'blocks/course-card';
+@use 'blocks/load-more';
+
+body {
+	font-family: $font-family;
+	font-size: 16px;
+	line-height: 1.5;
+	color: $color-text;
+	background-color: $color-bg;
+	-webkit-font-smoothing: antialiased;
+}

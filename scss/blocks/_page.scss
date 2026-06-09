@@ -1,0 +1,49 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.page {
+	position: relative;
+	padding-top: 45px;
+	padding-left: fluid(20, 0);
+	padding-right: fluid(20, 0);
+	background-color: $color-bg;
+	overflow-x: clip;
+}
+
+.page__decor {
+	position: absolute;
+	pointer-events: none;
+	user-select: none;
+}
+
+.page__decor--dots {
+	top: fluid(24, 55);
+	right: fluid(8, 0);
+	width: fluid(78, 117);
+	aspect-ratio: 117 / 177;
+	background: url('../../images/icons/dots.svg') no-repeat center / contain;
+}
+
+.page__decor--chevrons-left,
+.page__decor--chevrons-right {
+	background-repeat: no-repeat;
+	background-size: contain;
+}
+
+.page__decor--chevrons-left {
+	width: fluid(36, 83);   // было 28, 48
+	height: fluid(150, 44);
+	left: fluid(4, 56);
+	top: fluid(180, 687);   // меньше = выше
+	transform: none;        // убрать translateY(-50%)
+	background-image: url('../../images/icons/shapes-1.svg');
+}
+
+.page__decor--chevrons-right {
+	width: fluid(36, 85);   // было 28, 48
+	height: fluid(150, 85);
+	right: fluid(4, 72);
+	top: fluid(380, 1104);   // больше = ниже
+	transform: none;
+	background-image: url('../../images/icons/shapes.svg');
+}

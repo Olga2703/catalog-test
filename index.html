@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Our online courses</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div class="page">
+		<div class="page__decor page__decor--dots" aria-hidden="true"></div>
+		<div class="page__decor page__decor--chevrons-left" aria-hidden="true"></div>
+		<div class="page__decor page__decor--chevrons-right" aria-hidden="true"></div>
+
+		<main class="courses">
+			<header class="courses__header">
+				<p class="courses__eyebrow">Enjoy your studying!</p>
+				<h1 class="courses__title">Our online courses</h1>
+			</header>
+
+			<div class="courses__toolbar">
+				<nav class="filters" aria-label="Course categories">
+					<ul class="filters__list"></ul>
+				</nav>
+
+				<div class="search">
+					<label class="search__label" for="course-search">Search course</label>
+					<input
+						class="search__input"
+						id="course-search"
+						type="search"
+						placeholder="Search course..."
+						autocomplete="off"
+					>
+					<span class="search__icon" aria-hidden="true"></span>
+				</div>
+			</div>
+
+			<div class="courses__grid" role="list"></div>
+
+			<p class="courses__empty" hidden>No courses found</p>
+
+			<button class="load-more" type="button" hidden>
+				<span class="load-more__icon" aria-hidden="true"></span>
+				<span class="load-more__text">Load more</span>
+			</button>
+		</main>
+	</div>
+
+	<script src="js/data.js"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>

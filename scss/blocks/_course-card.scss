@@ -1,0 +1,98 @@
+@use '../base/variables' as *;
+@use '../base/mixins' as *;
+
+.course-card {
+	display: flex;
+	flex-direction: column;
+	border-radius: 4px;
+	background-color: $color-white;
+	box-shadow:
+		0 4px 4px -4px rgba(30, 33, 44, 0.03),
+		0 12px 10px -6px rgba(154, 156, 165, 0.04),
+		0 30px 24px -10px rgba(154, 156, 165, 0.08),
+		0 80px 80px -20px rgba(154, 156, 165, 0.08);
+	overflow: hidden;
+}
+
+.course-card__media {
+	position: relative;
+	aspect-ratio: 390 / 240;
+	background-color: $color-yellow;
+	overflow: hidden;
+}
+
+.course-card__image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center top;
+}
+
+.course-card__body {
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+	padding: fluid(20, 24);
+}
+
+.course-card__tag {
+	align-self: flex-start;
+	margin-bottom: fluid(8, 12);
+	padding: fluid(2, 4) fluid(6, 8);
+	border-radius: 4px;
+	font-size: fluid(12, 14);
+	font-weight: 700;
+	line-height: 1.5;
+	color: $color-white;
+
+	&--marketing {
+		background-color: $color-tag-marketing;
+	}
+
+	&--management {
+		background-color: $color-tag-management;
+	}
+
+	&--hr {
+		background-color: $color-tag-hr;
+	}
+
+	&--design {
+		background-color: $color-tag-design;
+	}
+
+	&--development {
+		background-color: $color-tag-development;
+	}
+}
+
+.course-card__title {
+	flex: 1;
+	margin-bottom: fluid(16, 20);
+	font-size: fluid(16, 20);
+	font-weight: 700;
+	line-height: 1.5;
+	color: $color-text;
+}
+
+.course-card__meta {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 8px;
+	font-size: fluid(14, 18);
+	line-height: 1.5;
+}
+
+.course-card__price {
+	font-weight: 700;
+	color: $color-accent;
+}
+
+.course-card__divider {
+	color: $color-text-light;
+}
+
+.course-card__author {
+	color: $color-text-muted;
+}
